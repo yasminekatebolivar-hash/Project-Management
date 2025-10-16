@@ -3,170 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barangay Resident Information Management System</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Barangay Resident Record Management System</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
-      background-color: #f5f6fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fff;
       color: #333;
       line-height: 1.6;
     }
-
     header {
-      background: linear-gradient(90deg, #007bff, #00c6ff);
+      background: linear-gradient(135deg, #ff7a00, #ffae42);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
-
     header h1 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 2.5em;
     }
-
     header p {
-      font-size: 1.1rem;
-      opacity: 0.9;
+      font-size: 1.2em;
     }
-
     section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-
     h2 {
-      color: #007bff;
-      margin-bottom: 15px;
-      border-left: 5px solid #007bff;
+      color: #ff7a00;
+      border-left: 5px solid #ff7a00;
       padding-left: 10px;
     }
-
-    ul {
-      margin: 15px 0 25px 25px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    .features, .outcomes, .next, .devs {
-      background: white;
+    .features, .developers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       margin-top: 20px;
-      padding: 25px;
+    }
+    .card {
+      background: #f9f9f9;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.2s;
     }
-
-    footer {
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .footer {
       text-align: center;
-      background-color: #007bff;
-      color: white;
-      padding: 20px 10px;
-      margin-top: 40px;
-      font-size: 0.95rem;
+      padding: 20px;
+      background: #222;
+      color: #ddd;
+      font-size: 0.9em;
     }
-
-    .button {
-      display: inline-block;
-      background: #007bff;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 20px;
-      transition: background 0.3s;
+    .orange {
+      color: #ff7a00;
     }
-
-    .button:hover {
-      background: #0056b3;
-    }
-
-    .devs-list {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      section {
-        padding: 30px 15px;
-      }
+    img.banner {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-bottom: 4px solid #ff7a00;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Barangay Resident Information Management System</h1>
-    <p>Digital • Centralized • Secure — A simple admin-only system for managing resident and household information.</p>
-    <a href="https://github.com/yasminekatebolivar-hash/Project Management" class="button" target="_blank">View on GitHub</a>
+    <h1>Barangay Resident Record Management System</h1>
+    <p><strong>Digital • Centralized • Secure</strong></p>
+    <p>A simple admin-only system for managing resident & household information.</p>
   </header>
 
+  <img src="https://github.com/user-attachments/assets/fab10a68-feaa-41e4-8282-05bd21839b0f" alt="System Banner" class="banner">
+
   <section>
+    <h2>Overview</h2>
+    <p>The <strong>Barangay Resident Record Management System (BRRMS)</strong> is a digital platform designed to help barangay staff efficiently record, organize, and manage resident and household information. It replaces paper forms and spreadsheets with a centralized and structured database.</p>
+    <p><strong>Intended use:</strong> Single-user / Admin-only (authorized barangay personnel).</p>
+  </section>
+
+  <section>
+    <h2>Key Features</h2>
     <div class="features">
-      <h2>📋 Overview</h2>
-      <p>The Barangay Resident Information Management System is a digital platform designed to help barangay staff efficiently record, organize, and manage resident and household information. It replaces paper forms and spreadsheets with a centralized and structured database for easy access and accuracy.</p>
-    </div>
-
-    <div class="features">
-      <h2>⚙️ Key Features</h2>
-      <ul>
-        <li><b>Resident Information Management:</b> Add, update, and manage resident records.</li>
-        <li><b>Household Profiling:</b> Group residents by household and identify family heads.</li>
-        <li><b>Search & Filter:</b> Find residents by name, age, or address with quick filters.</li>
-        <li><b>Reporting:</b> Generate reports for population, seniors, PWDs, and more.</li>
-        <li><b>Admin-Only Access:</b> Secure access limited to authorized barangay staff.</li>
-      </ul>
-    </div>
-
-    <div class="outcomes">
-      <h2>🎯 Expected Outcomes</h2>
-      <ul>
-        <li>Centralized, secure data storage for residents</li>
-        <li>Faster retrieval and transactions</li>
-        <li>Improved accuracy and reduced duplicate entries</li>
-        <li>Better decision-making for programs and budgets</li>
-        <li>Support for barangay digital transformation</li>
-      </ul>
-    </div>
-
-    <div class="next">
-      <h2>🚧 Project Status & Next Steps</h2>
-      <p>This is a proposed system — ideal for a capstone or thesis project, or for real barangay implementation after development and testing.</p>
-      <ul>
-        <li>Define detailed system requirements</li>
-        <li>Design database schema & UI mockups</li>
-        <li>Develop CRUD and reporting modules</li>
-        <li>Conduct user testing and deployment</li>
-      </ul>
-    </div>
-
-    <div class="devs">
-      <h2>👩‍💻 About the Developers</h2>
-      <p>Developed by 3rd Year Students from <b>West Visayas State University</b>, BSIS 3B and BA Major:</p>
-      <div class="devs-list">
-        <p>• Bolivar, Yasmine Kate</p>
-        <p>• Ilarde, Ralph Victor</p>
-        <p>• Sorilla, Cynthia Lene</p>
+      <div class="card">
+        <h3>🧾 Resident Information</h3>
+        <p>Add, view, update, and manage complete resident records efficiently.</p>
       </div>
-      <p style="margin-top:10px;">The team collaborated on design, development, and documentation to ensure functionality, accuracy, and usability.</p>
+      <div class="card">
+        <h3>🏠 Household Profiling</h3>
+        <p>Group residents by household, identify family heads, and track members.</p>
+      </div>
+      <div class="card">
+        <h3>🔎 Search & Filter</h3>
+        <p>Find residents easily by name, age, or address with quick filtering options.</p>
+      </div>
+      <div class="card">
+        <h3>🏷️ Categorization</h3>
+        <p>Tag residents as Senior Citizen, PWD, Student, Voter/Non-voter, etc.</p>
+      </div>
+      <div class="card">
+        <h3>📊 Reports & Statistics</h3>
+        <p>Generate population reports, household counts, and age distributions.</p>
+      </div>
+      <div class="card">
+        <h3>🔒 Admin Access</h3>
+        <p>Restricted system access for authorized barangay personnel only.</p>
+      </div>
     </div>
   </section>
 
-  <footer>
-    © 2025 Barangay Resident Information Management System | BSIS 3B | West Visayas State University
-  </footer>
+  <section>
+    <h2>Expected Outcomes</h2>
+    <ul>
+      <li>Centralized and secure resident data storage</li>
+      <li>Faster retrieval and processing of information</li>
+      <li>Accurate reporting for planning and disaster response</li>
+      <li>Reduced duplicate or incorrect records</li>
+      <li>Improved transparency and service delivery</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>About the Developers</h2>
+    <p>Developed by <strong>3rd Year BSIS 3B and BA Major students</strong> from West Visayas State University:</p>
+    <p><strong>Bolivar, Yasmine Kate</strong> • <strong>Ilarde, Ralph Victor</strong> • <strong>Sorilla, Cynthia Lene</strong></p>
+    <img src="https://github.com/user-attachments/assets/db51ee17-75af-4a28-a77b-908a5b523a7f" alt="Developers" style="width:100%; border-radius:10px; margin-top:10px;">
+  </section>
+
+  <div class="footer">
+    © 2025 Barangay Resident Record Management System | Designed by BSIS 3B - WVSU
+  </div>
+
+</body>
+</html>
